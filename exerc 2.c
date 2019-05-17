@@ -40,11 +40,11 @@ int *solucao(struct entrada *entradas, int n, int h)
             if(intera[c1]<intera[c1+1])
             {
                 temp=intera[c1+1];
-                intera[c2]=intera[c1];
+                intera[c1]=intera[c1+1];
                 intera[c1]=temp;
 
-                TEMP=entradas[c2];
-                entradas[c2]=entradas[c1];
+                TEMP=entradas[c1+1];
+                entradas[c1+1]=entradas[c1];
                 entradas[c1]=TEMP;
             }
         }
