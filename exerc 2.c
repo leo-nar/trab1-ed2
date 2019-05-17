@@ -36,7 +36,7 @@ int *solucao(struct entrada *entradas, int n, int h)
         }
     }
 
-    for(c2=0;c2<n;c2++)
+    for(c2=1;c2<=n;c2++)
     {
      for(c1=0;c1<=n-c2;c1++)
         {
@@ -93,3 +93,11 @@ int main()
 
     return 0;
 }
+/*2
+2 4
+1 3 2 1 4
+2 4 3 2 1
+3 4
+1 3 2 1 4
+2 3 1 2 4
+3 3 2 1 4*/
