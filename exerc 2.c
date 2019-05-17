@@ -40,7 +40,7 @@ int *solucao(struct entrada *entradas, int n, int h)
     {
      for(c1=0;c1<=n-c2-1;c1++)
         {
-            if(intera[c1]>intera[c1])
+            if(intera[c1]>intera[c1+1])
             {
                 temp=intera[c1+1];
                 intera[c1]=intera[c1+1];
