@@ -19,9 +19,9 @@ int *solucao(struct entrada *entradas, int n, int h)
 
     for(c1=0;c1<n;c1++)//repete o loop pra cada ID
     {
-        for(c2=0;c2<h;c2++)//repete pra cada hobbie
+        for(c3=0;c3<h;c3++)//repete pra cada hobbie
         {
-            for(c3=0;c3<h-c2;c3++)
+            for(c2=0;c2<h-c3;c2++)
             {
                 if(entradas[c1].hobbies[c2]>entradas[c1].hobbies[c2+1])
                 {
