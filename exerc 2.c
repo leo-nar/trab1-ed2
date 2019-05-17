@@ -22,14 +22,17 @@ int *solucao(struct entrada *entradas, int n, int h)
         for(c2=0;c2<h;c2++)//repete pra cada hobbie
         {
             for(c3=0;c3<h-c2;c3++)
-            if(entradas[c1].hobbies[c2]>entradas[c1].hobbies[c2+1])
             {
-                temp=entradas[c1].hobbies[c2+1];
-                entradas[c1].hobbies[c2+1]=entradas[c1].hobbies[c2];
-                entradas[c1].hobbies[c2]=temp;
-
-                intera[c1]++;
+                if(entradas[c1].hobbies[c2]>entradas[c1].hobbies[c2+1])
+                {
+                    temp=entradas[c1].hobbies[c2+1];
+                    entradas[c1].hobbies[c2+1]=entradas[c1].hobbies[c2];
+                    entradas[c1].hobbies[c2]=temp;
+                    
+                    intera[c1]++;
+                }
             }
+            
         }
     }
 
@@ -37,7 +40,7 @@ int *solucao(struct entrada *entradas, int n, int h)
     {
      for(c1=0;c1<n-c2;c1++)
         {
-            if(intera[c1]<intera[c1+1])
+            if(intera[c1]>intera[c1+1])
             {
                 temp=intera[c1+1];
                 intera[c1]=intera[c1+1];
