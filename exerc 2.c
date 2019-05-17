@@ -28,19 +28,19 @@ int *solucao(struct entrada *entradas, int n, int h)
                     temp=entradas[c1].hobbies[c2+1];
                     entradas[c1].hobbies[c2+1]=entradas[c1].hobbies[c2];
                     entradas[c1].hobbies[c2]=temp;
-                    
+
                     intera[c1]++;
                 }
             }
-            
+
         }
     }
 
     for(c2=0;c2<n;c2++)
     {
-     for(c1=0;c1<n-c2;c1++)
+     for(c1=0;c1<=n-c2-1;c1++)
         {
-            if(intera[c1]>intera[c1+1])
+            if(intera[c1]>intera[c1])
             {
                 temp=intera[c1+1];
                 intera[c1]=intera[c1+1];
