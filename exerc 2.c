@@ -55,7 +55,7 @@ int *solucao(struct entrada *entradas, int n, int h)
 
     for(c1=0;c1<n;c1++)
     {
-        ret[c1]=entradas[c1].usuario_id;
+        ret[c1]=entradas[c1+1].usuario_id;
     }
 
     return ret;
