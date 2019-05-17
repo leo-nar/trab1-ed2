@@ -31,22 +31,21 @@ int *solucao(struct entrada *entradas, int n, int h)
                 intera[c1]++;
             }
         }
-        if(c1==0)
-        {}
-        else
-        {
-            for(c2=0;c2<c1;c2++)
-            {
-                if(intera[c1]<intera[c2])
-                {
-                    temp=intera[c2];
-                    intera[c2]=intera[c1];
-                    intera[c1]=temp;
+    }
 
-                    TEMP=entradas[c2];
-                    entradas[c2]=entradas[c1];
-                    entradas[c1]=TEMP;
-                }
+    for(c2=0;c2<n;c2++)
+    {
+     for(c1=0;c1<n-c2;c1++)
+        {
+            if(intera[c1]<intera[c1+1])
+            {
+                temp=intera[c1+1];
+                intera[c2]=intera[c1];
+                intera[c1]=temp;
+
+                TEMP=entradas[c2];
+                entradas[c2]=entradas[c1];
+                entradas[c1]=TEMP;
             }
         }
     }
@@ -91,4 +90,3 @@ int main()
 
     return 0;
 }
-
