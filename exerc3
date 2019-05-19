@@ -47,7 +47,7 @@ int *solucao(struct entrada *entradas, int m, int n_teams)
 {
     int *ret = (int *) malloc(n_teams * sizeof(int));
 
-    int c1,c2;
+    int c1;
     int *rank;
     mtr *mtr1;
 
@@ -86,8 +86,18 @@ int *solucao(struct entrada *entradas, int m, int n_teams)
         }
     }
 
-    //faz media!!!
+    for(c1=0;1<n_teams;c1++)//faz media!!!
+    {
+        if(mtr1[c1].sofridos==0)
+        {
+            mtr1[c1].media=mtr1[c1].feitos;
+        }
+        else
+        {
+            mtr1[c1].media=mtr1[c1].feitos/mtr1[c1].sofridos;
+        }
 
+    }
 
     //quicksort
 
@@ -98,7 +108,7 @@ int *solucao(struct entrada *entradas, int m, int n_teams)
 int main()
 {
     int *ret;
-    int t, i, j;
+    int t, i;
     int T, N;
 
     scanf("%d", &T);
